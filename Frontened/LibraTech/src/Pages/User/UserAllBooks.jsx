@@ -20,7 +20,7 @@ export default function UserAllBooks() {
       setLoading(true);
 
       const response = await axios.get(
-        "http://localhost:5000/api/book/all",
+        "https://library-management-systen.vercel.app/api/book/all",
         {
           withCredentials: true,
         }
@@ -61,7 +61,7 @@ export default function UserAllBooks() {
       console.log("FILTER PARAMS:", params);
 
       const response = await axios.get(
-        "http://localhost:5000/api/book/filter",
+        "https://library-management-systen.vercel.app/api/book/filter",
         {
           params,
           withCredentials: true,
@@ -109,7 +109,7 @@ export default function UserAllBooks() {
   const borrowBook = async (bookId) => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/borrow/borrow",
+        "https://library-management-systen.vercel.app/api/borrow/borrow",
         {
           bookId: bookId,
         },
