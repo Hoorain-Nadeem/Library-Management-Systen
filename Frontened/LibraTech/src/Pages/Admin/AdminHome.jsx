@@ -10,7 +10,7 @@ export default function AdminDashboard() {
   const getBooks = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/book/all",
+        "https://library-management-systen.vercel.app/api/book/all",
         {
           withCredentials: true,
         }
@@ -26,7 +26,7 @@ export default function AdminDashboard() {
   const getMembers = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/member/all",
+        "https://library-management-systen.vercel.app/api/member/all",
         {
           withCredentials: true,
         }
