@@ -30,7 +30,7 @@ export default function AdminBooks() {
   const getBooks = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/book/all",
+        "https://library-management-systen.vercel.app/api/book/all",
         {
           withCredentials: true,
         }
@@ -74,7 +74,7 @@ export default function AdminBooks() {
 
       if (editingISBN) {
         const response = await axios.put(
-          `http://localhost:5000/api/book/edit/${editingISBN}`,
+          `https://library-management-systen.vercel.app/api/book/edit/${editingISBN}`,
           formData,
           {
             withCredentials: true,
@@ -93,7 +93,7 @@ export default function AdminBooks() {
 
       else {
         const response = await axios.post(
-          "http://localhost:5000/api/book/create",
+          "https://library-management-systen.vercel.app/api/book/create",
           formData,
           {
             withCredentials: true,
@@ -134,7 +134,7 @@ export default function AdminBooks() {
 
     try {
       const response = await axios.delete(
-        `http://localhost:5000/api/book/delete/${ISBN}`,
+        `https://library-management-systen.vercel.app/api/book/delete/${ISBN}`,
         {
           withCredentials: true,
         }
@@ -221,7 +221,7 @@ export default function AdminBooks() {
       console.log("FILTER PARAMS:", params);
 
       const response = await axios.get(
-        "http://localhost:5000/api/book/filter",
+        "https://library-management-systen.vercel.app/api/book/filter",
         {
           params,
           withCredentials: true,
