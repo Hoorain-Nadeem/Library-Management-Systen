@@ -29,7 +29,7 @@ export default function AdminMembers() {
   const getMembers = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/member/all",
+        "https://library-management-systen.vercel.app/api/member/all",
         {
           withCredentials: true,
         }
@@ -97,7 +97,7 @@ export default function AdminMembers() {
 
       if (editingUserId) {
         const response = await axios.post(
-          `http://localhost:5000/api/member/edit/${editingUserId}`,
+          `https://library-management-systen.vercel.app/api/member/edit/${editingUserId}`,
           {
             name: formData.name,
             email: formData.email,
@@ -124,7 +124,7 @@ export default function AdminMembers() {
       // =====================================================
 
       const response = await axios.post(
-        "http://localhost:5000/api/user/register",
+        "https://library-management-systen.vercel.app/api/user/register",
         {
           name: formData.name,
           email: formData.email,
@@ -201,7 +201,7 @@ export default function AdminMembers() {
 
     try {
       const response = await axios.post(
-        `http://localhost:5000/api/member/del/${userId}`,
+        `https://library-management-systen.vercel.app/api/member/del/${userId}`,
         {
           withCredentials: true,
         }
@@ -242,7 +242,7 @@ export default function AdminMembers() {
 
     try {
       const response = await axios.post(
-        `http://localhost:5000/api/member/upgrade/${userId}`,
+        `https://library-management-systen.vercel.app/api/member/upgrade/${userId}`,
         {},
         {
           withCredentials: true,
