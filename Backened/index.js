@@ -25,9 +25,7 @@ mongoose
     console.log(err);
   });
 
-app.listen(process.env.PORT, () => {
-  console.log("server is running");
-});
+module.exports=app
 
 app.use('/api/user',userRouter)
 app.use('/api/book',bookRouter)
