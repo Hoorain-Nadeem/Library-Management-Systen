@@ -14,7 +14,7 @@ export default function UserDashboard() {
   const user = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/user/profile",
+        "https://library-management-systen.vercel.app/api/user/profile",
         {},
         {
           withCredentials: true,
@@ -33,7 +33,7 @@ export default function UserDashboard() {
   const getBooks = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/book/all",
+        "https://library-management-systen.vercel.app/api/book/all",
         {
           withCredentials: true,
         }
@@ -51,7 +51,7 @@ export default function UserDashboard() {
       setLoading(true);
 
       const response = await axios.get(
-        "http://localhost:5000/api/borrow/my-books",
+        "https://library-management-systen.vercel.app/api/borrow/my-books",
         {
           withCredentials: true,
         }
@@ -78,7 +78,7 @@ export default function UserDashboard() {
       setReturningId(borrowId);
 
       const response = await axios.put(
-        `http://localhost:5000/api/borrow/return/${borrowId}`,
+        `https://library-management-systen.vercel.app/api/borrow/return/${borrowId}`,
         {},
         {
           withCredentials: true,
