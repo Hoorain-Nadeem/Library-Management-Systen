@@ -8,7 +8,7 @@ export default function AdminSidebar() {
   const handleLogout = async () => {
     try {
       await axios.post(
-        "http://localhost:5000/api/user/logout",
+        "https://library-management-systen.vercel.app/api/user/logout",
         {},
         {
           withCredentials: true,
