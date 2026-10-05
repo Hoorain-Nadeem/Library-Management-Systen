@@ -1,8 +1,8 @@
 import "./App.css";
-import Home from "./Pages/Home";
+import Home from "./Pages/Home.jsx";
 import { Route, Routes } from "react-router-dom";
-import Signup from "./Pages/signUp";
-import Login from "./Pages/Login";
+import Signup from "./Pages/signUp.jsx";
+import Login from "./Pages/Login.jsx";
 // import Dashboard from "./Pages/Dashboard";
 import Books from "./Pages/Admin/AdminBooks.jsx";
 import AdminSidebar from "./Pages/Admin/AdminSidebar.jsx";
