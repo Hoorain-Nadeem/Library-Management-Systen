@@ -134,7 +134,7 @@ export default function AdminBooks() {
 
     try {
       const response = await axios.delete(
-        `https://library-management-systen.vercel.app/api/book/delete/${ISBN}`,
+        `https://library-management-systen.vercel.app/api/book/del/${ISBN}`,
         {
           withCredentials: true,
         }
