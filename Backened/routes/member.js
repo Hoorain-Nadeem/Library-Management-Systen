@@ -6,8 +6,8 @@ const { memberDel, memberEdit, memberList, memberUpgrade } = require('../control
 let memberRouter = express.Router()
 
 
-memberRouter.post("/del/:userId",profileMiddleware,memberDel)
-memberRouter.post("/edit/:userId",profileMiddleware,memberEdit)
+memberRouter.post("/del/:userId",memberDel)
+memberRouter.post("/edit/:userId",memberEdit)
 memberRouter.get("/all",profileMiddleware,memberList)
 memberRouter.post("/upgrade/:userId",profileMiddleware,memberUpgrade)
 module.exports = memberRouter
