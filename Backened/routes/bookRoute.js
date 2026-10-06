@@ -5,8 +5,8 @@ const { bookInsert, bookDel, bookEdit, bookList, getBookById, bookFilter } = req
 let bookRouter = express.Router()
 
 bookRouter.post("/create",profileMiddleware,bookInsert)
-bookRouter.post("/del/:ISBN",profileMiddleware,bookDel)
-bookRouter.post("/edit/:ISBN",bookEdit)
+bookRouter.delete("/del/:ISBN",profileMiddleware,bookDel)
+bookRouter.put("/edit/:ISBN",bookEdit)
 bookRouter.get("/all",profileMiddleware,bookList)
 bookRouter.get("/filter",profileMiddleware,bookFilter)
 bookRouter.get("/my-books/:id",profileMiddleware,getBookById)
